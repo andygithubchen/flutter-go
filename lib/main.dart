@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fluro/fluro.dart';
 import 'package:flutter/rendering.dart';
-import 'routers/routers.dart';
-import 'routers/application.dart';
+import 'package:fluro/fluro.dart';
 
+import 'package:flutter_go/routers/routers.dart';
+import 'package:flutter_go/routers/application.dart';
 import 'package:flutter_go/utils/provider.dart';
 import 'package:flutter_go/utils/shared_preferences.dart';
 import 'package:flutter_go/views/first_page/home.dart';
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'title',
+      title: 'title1',
       theme: new ThemeData(
         primaryColor: Color(ThemeColor),
         backgroundColor: Color(0xFFEFEFEF),
