@@ -29,10 +29,10 @@ var widgetNotFoundHandler = new Handler(
 
 var fullScreenCodeDialog = new Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
-  String path = params['filePath']?.first;
-  return new FullScreenCodeDialog(
-    filePath: path,
-  );
+      String path = params['filePath']?.first;
+      return new FullScreenCodeDialog(
+        filePath: path,
+    );
 });
 
 var webViewPageHand = new Handler(

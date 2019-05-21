@@ -55,8 +55,7 @@ class _MyHomePageState extends State<AppPage>
     super.initState();
 
     initSearchHistory();
-    controller = new TabController(
-        initialIndex: 0, vsync: this, length: 4); // 这里的length 决定有多少个底导 submenus
+    controller = new TabController(initialIndex: 0, vsync: this, length: 4); // 这里的length 决定有多少个底导 submenus
     for (int i = 0; i < tabData.length; i++) {
       myTabs.add(new Tab(text: tabData[i]['text'], icon: tabData[i]['icon']));
     }
@@ -90,8 +89,7 @@ class _MyHomePageState extends State<AppPage>
         targetRouter = item.routerName;
       }
     });
-    searchHistoryList
-        .add(SearchHistory(name: targetName, targetRouter: targetRouter));
+    searchHistoryList.add(SearchHistory(name: targetName, targetRouter: targetRouter));
     print("searchHistoryList ${searchHistoryList.toString()}");
     Application.router.navigateTo(context, "$targetRouter");
   }
@@ -147,12 +145,12 @@ class _MyHomePageState extends State<AppPage>
             ),
             child: TabBar(
                 controller: controller,
-                indicatorColor: Theme.of(context).primaryColor,
-                //tab标签的下划线颜色
-                // labelColor: const Color(0xFF000000),
                 indicatorWeight: 3.0,
-                labelColor: Theme.of(context).primaryColor,
-                unselectedLabelColor: const Color(0xFF8E8E8E),
+                indicatorColor: Theme.of(context).primaryColor, //tab标签的下划线颜色
+
+                labelColor: Theme.of(context).primaryColor,    //tab标签选中颜色
+                //labelColor: const Color(0xFF000000),           //tab标签选中颜色
+                unselectedLabelColor: const Color(0xFF8E8E8E), //tab标签默认颜色
                 tabs: myTabs),
           ),
         ),

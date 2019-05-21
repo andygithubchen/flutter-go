@@ -20,7 +20,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   event_bus: ^1.0.1
-  fluro: ^1.3.4
+  fluro: ^1.3.4       #第三方路由库fluro
   image_picker: ^0.4.10
   sqflite: ^0.12.1
   flutter_markdown: ^0.2.0

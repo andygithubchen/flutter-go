@@ -48,7 +48,7 @@ class FirstPageState extends State<FirstPage> with AutomaticKeepAliveClientMixin
     }
   }
 
-
+  //调接口加载数据
   Future<Map> getIndexListData([Map<String, dynamic> params]) async {
     const juejin_flutter = 'https://timeline-merger-ms.juejin.im/v1/get_tag_entry?src=web&tagId=5a96291f6fb9a0535b535438';
     var pageIndex = (params is Map) ? params['pageIndex'] : 0;
@@ -80,12 +80,12 @@ class FirstPageState extends State<FirstPage> with AutomaticKeepAliveClientMixin
     return result;
   }
 
+  //文章列表List Card
   Widget makeCard(index,item){
-
     var myTitle = '${item.title}';
     var myUsername = '${'👲'}: ${item.username} ';
     var codeUrl = '${item.detailUrl}';
-    return new ListViewItem(itemUrl:codeUrl,itemTitle: myTitle,data: myUsername,);
+    return new ListViewItem(itemUrl:codeUrl,itemTitle: myTitle,data: myUsername,); //这里的默认把makeCard的key 给了？？？
   }
 
   headerView(){

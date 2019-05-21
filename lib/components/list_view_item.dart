@@ -14,9 +14,7 @@ class ListViewItem extends StatelessWidget {
   final String itemTitle;
   final String data;
 
-  const ListViewItem({Key key, this.itemUrl, this.itemTitle, this.data})
-      : super(key: key);
-
+  const ListViewItem({Key key, this.itemUrl, this.itemTitle, this.data}) : super(key: key); //这里的key时调用这个类的Widget给的？？？
 
   @override
   Widget build(BuildContext context) {
@@ -39,8 +37,7 @@ class ListViewItem extends StatelessWidget {
         subtitle: Row(
           children: <Widget>[
             Padding(
-              child: Text(data,
-                  style: TextStyle(color: Colors.black54, fontSize: 10.0)),
+              child: Text(data, style: TextStyle(color: Colors.black54, fontSize: 10.0)),
               padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
             )
           ],
